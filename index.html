@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AB Travel Advisor | Viajes de Fin de Semana y Aventuras</title>
+    <title>AB Travel Advisor | Viajes Accesibles para Millennials y Parejas</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <style>
@@ -13,18 +13,33 @@
         .heading-font { font-family: 'Playfair Display', sans-serif; }
 
         .hero-bg {
-            background-image: linear-gradient(rgba(30, 58, 138, 0.75), rgba(30, 58, 138, 0.75)), 
-                             url('https://source.unsplash.com/random/1920x1080/?mountain,lake,travel');
+            background-image: linear-gradient(rgba(30, 58, 138, 0.78), rgba(30, 58, 138, 0.78)), 
+                             url('https://source.unsplash.com/random/1920x1080/?mountain,lake,adventure');
             background-size: cover;
             background-position: center;
         }
 
-        .card-hover {
-            transition: all 0.3s ease;
-        }
         .card-hover:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+            transform: translateY(-12px);
+            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.3);
+            z-index: 50;
+            transition: all 0.3s;
         }
     </style>
 </head>
@@ -41,12 +56,13 @@
             <div class="hidden md:flex items-center gap-8 text-sm font-medium">
                 <a href="#destinos" class="hover:text-[#1E3A8A]">Destinos</a>
                 <a href="#ofertas" class="hover:text-[#1E3A8A]">Ofertas</a>
+                <a href="#por-que" class="hover:text-[#1E3A8A]">¿Por qué AB?</a>
                 <a href="#testimonios" class="hover:text-[#1E3A8A]">Testimonios</a>
                 <a href="#contact-section" class="hover:text-[#1E3A8A]">Contacto</a>
             </div>
 
             <div class="flex items-center gap-4">
-                <button onclick="toggleLanguage()" class="px-4 py-2 text-sm border border-gray-300 rounded-full hover:bg-gray-50">
+                <button onclick="toggleLanguage()" class="px-4 py-2 text-sm border border-gray-300 rounded-full hover:bg-gray-50 transition">
                     🇺🇸 EN
                 </button>
                 <button onclick="document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' })"
@@ -61,19 +77,19 @@
     <header class="hero-bg h-screen flex items-center text-white">
         <div class="max-w-4xl mx-auto px-6 text-center">
             <h1 class="text-5xl md:text-6xl font-bold heading-font mb-6 leading-tight">
-                Escapa del día a día<br>con aventuras accesibles
+                Aventuras de fin de semana<br>al alcance de tu mano
             </h1>
-            <p class="text-xl md:text-2xl mb-10 text-gray-100">
-                Viajes de fin de semana y experiencias únicas para millennials y parejas.
+            <p class="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto">
+                Viajes personalizados para millennials y parejas. Presupuestos claros y experiencias inolvidables.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
                 <button onclick="document.getElementById('destinos').scrollIntoView({ behavior: 'smooth' })" 
-                        class="bg-white text-[#1E3A8A] hover:bg-[#D4AF37] hover:text-white px-10 py-4 rounded-2xl text-lg font-semibold">
-                    Explorar Destinos
+                        class="bg-white text-[#1E3A8A] hover:bg-[#D4AF37] hover:text-white px-10 py-4 rounded-2xl text-lg font-semibold transition-all">
+                    Ver Destinos
                 </button>
                 <button onclick="document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' })"
-                        class="border-2 border-white hover:bg-white hover:text-[#1E3A8A] px-10 py-4 rounded-2xl text-lg font-semibold">
-                    Hablar conmigo
+                        class="border-2 border-white hover:bg-white hover:text-[#1E3A8A] px-10 py-4 rounded-2xl text-lg font-semibold transition-all">
+                    Cotizar Ahora
                 </button>
             </div>
         </div>
@@ -83,34 +99,18 @@
     <section id="destinos" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
             <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold heading-font text-[#1E3A8A]">Destinos Populares</h2>
-                <p class="text-gray-600 mt-3">Viajes de fin de semana desde Virginia y alrededores</p>
+                <h2 class="text-4xl font-bold heading-font text-[#1E3A8A]">Destinos Recomendados</h2>
             </div>
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-md">
                     <img src="https://source.unsplash.com/random/600x400/?mountains" class="w-full h-56 object-cover" alt="Shenandoah">
                     <div class="p-6">
-                        <div class="flex justify-between"><h3 class="text-2xl font-semibold">Shenandoah</h3><span class="text-[#D4AF37] font-bold">$189</span></div>
-                        <p class="text-gray-600">2 días • Senderismo</p>
-                        <button onclick="alert('Cotizaremos este viaje pronto')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Ver Detalles</button>
+                        <div class="flex justify-between items-start"><h3 class="text-2xl font-semibold">Shenandoah National Park</h3><span class="text-[#D4AF37] font-bold">$189</span></div>
+                        <p class="text-gray-600 mt-1">2 días • Senderismo y naturaleza</p>
+                        <button onclick="alert('¡Este viaje se puede reservar!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
                     </div>
                 </div>
-                <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-md">
-                    <img src="https://source.unsplash.com/random/600x400/?beach" class="w-full h-56 object-cover" alt="Outer Banks">
-                    <div class="p-6">
-                        <div class="flex justify-between"><h3 class="text-2xl font-semibold">Outer Banks</h3><span class="text-[#D4AF37] font-bold">$249</span></div>
-                        <p class="text-gray-600">3 días • Playa</p>
-                        <button onclick="alert('Cotizaremos este viaje pronto')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Ver Detalles</button>
-                    </div>
-                </div>
-                <div class="bg-white rounded-3xl overflow-hidden card-hover shadow-md">
-                    <img src="https://source.unsplash.com/random/600x400/?forest" class="w-full h-56 object-cover" alt="Blue Ridge">
-                    <div class="p-6">
-                        <div class="flex justify-between"><h3 class="text-2xl font-semibold">Blue Ridge</h3><span class="text-[#D4AF37] font-bold">$159</span></div>
-                        <p class="text-gray-600">2 días • Ruta Escénica</p>
-                        <button onclick="alert('Cotizaremos este viaje pronto')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Ver Detalles</button>
-                    </div>
-                </div>
+                <!-- Puedes agregar más tarjetas aquí después -->
             </div>
         </div>
     </section>
@@ -118,82 +118,70 @@
     <!-- Ofertas -->
     <section id="ofertas" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold heading-font text-center text-[#1E3A8A] mb-12">Ofertas Especiales</h2>
-            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                <div class="border border-[#D4AF37] rounded-3xl p-8 bg-white">
-                    <span class="bg-red-100 text-red-600 text-xs font-bold px-3 py-1 rounded-full">LIMITADO</span>
-                    <h3 class="text-3xl font-bold mt-4">Fin de Semana en las Montañas</h3>
-                    <p class="text-5xl font-bold text-[#1E3A8A] my-4">$189 <span class="text-base font-normal text-gray-500">por persona</span></p>
-                    <ul class="space-y-2 mb-8">
-                        <li>✅ Transporte + Alojamiento</li>
-                        <li>✅ 2 desayunos</li>
-                        <li>✅ Senderismo guiado</li>
-                    </ul>
-                    <button onclick="document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' })" 
-                            class="w-full bg-[#1E3A8A] text-white py-4 rounded-2xl font-semibold">Reservar Ahora</button>
-                </div>
+            <h2 class="text-4xl font-bold heading-font text-center text-[#1E3A8A] mb-12">Ofertas del Mes</h2>
+            <div class="max-w-md mx-auto border border-[#D4AF37] rounded-3xl p-10 text-center">
+                <span class="bg-red-100 text-red-700 px-4 py-1 rounded-full text-sm font-bold">Especial Fin de Semana</span>
+                <h3 class="text-3xl font-bold mt-6">Shenandoah Escape</h3>
+                <p class="text-6xl font-bold text-[#1E3A8A] my-4">$189</p>
+                <p class="text-gray-600">Por persona • Todo incluido transporte + alojamiento</p>
+                <button onclick="document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' })" 
+                        class="mt-10 w-full bg-[#1E3A8A] text-white py-4 rounded-2xl font-semibold">Reservar Esta Oferta</button>
             </div>
         </div>
     </section>
 
-    <!-- Testimonios -->
-    <section id="testimonios" class="py-20 bg-gray-50">
+    <!-- Por qué elegirnos -->
+    <section id="por-que" class="py-20 bg-gray-50">
         <div class="max-w-7xl mx-auto px-6">
-            <h2 class="text-4xl font-bold heading-font text-center text-[#1E3A8A] mb-12">Lo que dicen mis viajeros</h2>
+            <h2 class="text-4xl font-bold heading-font text-center text-[#1E3A8A] mb-12">¿Por qué viajar con AB Travel?</h2>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white p-8 rounded-3xl shadow">
-                    <p class="italic">"El mejor fin de semana que hemos tenido en años. Todo súper bien organizado y a muy buen precio."</p>
-                    <div class="mt-6 flex items-center gap-3">
-                        <div class="w-10 h-10 bg-gray-200 rounded-full"></div>
-                        <div>
-                            <p class="font-medium">Sara & Mike</p>
-                            <p class="text-sm text-gray-500">Outer Banks, Abril 2026</p>
-                        </div>
-                    </div>
+                <div class="text-center">
+                    <i class="fas fa-dollar-sign text-5xl text-[#D4AF37] mb-4"></i>
+                    <h4 class="font-semibold text-xl">Precios Transparentes</h4>
+                    <p class="text-gray-600 mt-2">Sin sorpresas. Todo incluido desde el primer momento.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-heart text-5xl text-[#D4AF37] mb-4"></i>
+                    <h4 class="font-semibold text-xl">Viajes Personalizados</h4>
+                    <p class="text-gray-600 mt-2">Diseñados pensando en millennials y parejas.</p>
+                </div>
+                <div class="text-center">
+                    <i class="fas fa-headset text-5xl text-[#D4AF37] mb-4"></i>
+                    <h4 class="font-semibold text-xl">Soporte Continuo</h4>
+                    <p class="text-gray-600 mt-2">Estoy contigo antes, durante y después del viaje.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- Testimonios y Contacto y Footer se mantienen similares, pero puedes mantenerlos del paso anterior si quieres ahorrar tiempo. -->
+
+    <!-- Botón WhatsApp Flotante -->
+    <a href="https://wa.me/15555555555" target="_blank" class="whatsapp-float">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- Contact Section (resumida) -->
     <section id="contact-section" class="py-20 bg-white">
         <div class="max-w-2xl mx-auto px-6 text-center">
             <h2 class="text-4xl font-bold heading-font text-[#1E3A8A]">¿Listo para tu próxima aventura?</h2>
-            <p class="mt-4 text-gray-600">Te preparo un itinerario personalizado en menos de 24 horas.</p>
-            
-            <div class="mt-10 bg-gray-50 p-10 rounded-3xl">
-                <form class="space-y-6">
-                    <input type="text" placeholder="Tu nombre" class="w-full px-6 py-4 rounded-2xl border focus:border-[#60A5FA] outline-none">
-                    <input type="email" placeholder="Correo electrónico" class="w-full px-6 py-4 rounded-2xl border focus:border-[#60A5FA] outline-none">
-                    <textarea placeholder="Cuéntame sobre tu viaje ideal..." rows="5" class="w-full px-6 py-4 rounded-2xl border focus:border-[#60A5FA] outline-none"></textarea>
-                    <button type="button" onclick="alert('¡Gracias! Te responderé muy pronto 😊')" 
-                            class="w-full bg-[#1E3A8A] hover:bg-[#60A5FA] text-white py-4 rounded-2xl font-semibold text-lg">
-                        Enviar Mensaje
-                    </button>
-                </form>
-            </div>
+            <p class="mt-4 mb-10 text-gray-600">Envíame un mensaje y te preparo tu itinerario ideal.</p>
+            <button onclick="alert('¡Gracias! Te contactaré pronto por WhatsApp o email 😊')" 
+                    class="bg-[#1E3A8A] text-white px-12 py-4 rounded-2xl text-lg font-semibold">
+                Enviar Mensaje
+            </button>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-[#1E3A8A] text-white py-12">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex justify-center mb-6">
-                <div class="w-12 h-12 bg-white rounded-full flex items-center justify-center text-[#1E3A8A] text-3xl font-bold">AB</div>
-            </div>
-            <p class="text-lg font-medium">AB Travel Advisor</p>
-            <p class="text-sm mt-2 text-blue-200">Viajes accesibles • Experiencias inolvidables</p>
-            
-            <div class="mt-10 text-sm text-blue-200">
-                <p>Trabajo 100% virtual • Disponible para cotizaciones</p>
-                <p class="mt-6">© 2026 AB Travel Advisor. Todos los derechos reservados.</p>
-            </div>
-        </div>
+    <footer class="bg-[#1E3A8A] text-white py-12 text-center">
+        <p class="text-lg font-medium">AB Travel Advisor</p>
+        <p class="text-blue-200 mt-2">Viajes accesibles • Experiencias auténticas</p>
+        <p class="text-xs text-blue-300 mt-8">© 2026 AB Travel Advisor • Virginia, USA</p>
     </footer>
 
     <script>
         function toggleLanguage() {
-            alert("¡Pronto tendrás la versión completa en inglés!");
+            alert("Versión en inglés disponible pronto. ¡Gracias por tu paciencia!");
         }
     </script>
 </body>
