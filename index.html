@@ -19,7 +19,7 @@
         
         body { 
             font-family: 'Open Sans', sans-serif; 
-            background-color: #F8F9FA;
+            background-color: #F1F3F5;
         }
         .heading-font { 
             font-family: 'Montserrat', sans-serif; 
@@ -34,12 +34,12 @@
         }
 
         .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            transition: all 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
         }
         
         .card-hover:hover {
-            transform: translateY(-12px);
-            box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.25);
+            transform: translateY(-16px);
+            box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.3);
         }
     </style>
 </head>
@@ -57,7 +57,7 @@
                 <button onclick="toggleLanguage()" id="lang-btn"
                         class="px-5 py-2 text-sm font-bold border-2 border-gray-300 rounded-full hover:bg-gray-100 transition-all">
                     <span id="lang-es" class="text-[#1E3A8A]">ES</span> / 
-                    <span id="lang-en">EN</span>
+                    <span id="lang-en" class="text-gray-400">EN</span>
                 </button>
                 
                 <button onclick="document.getElementById('contact-section').scrollIntoView({ behavior: 'smooth' })"
@@ -92,30 +92,122 @@
             <h2 id="destinos-title" class="text-3xl md:text-4xl font-bold heading-font text-center text-[#1E3A8A] mb-12">Destinos Populares</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- 1. Santa Fe -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
+                    <img src="https://source.unsplash.com/random/600x400/?santafe,newmexico" class="w-full h-56 object-cover" alt="Santa Fe">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold heading-font">New Mexican Flavors Food Tour - Santa Fe</h3>
+                            <span class="text-[#D4AF37] font-bold">$215</span>
+                        </div>
+                        <p class="text-[#6B7280]">Santa Fe, New Mexico • 2 días</p>
+                        <button onclick="alert('¡Te prepararé una cotización para Santa Fe!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
+                    </div>
+                </div>
+
+                <!-- 2. Shenandoah -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
                     <img src="https://source.unsplash.com/random/600x400/?mountains" class="w-full h-56 object-cover" alt="Shenandoah">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
-                            <h3 class="text-2xl font-bold heading-font">Shenandoah</h3>
+                            <h3 class="text-2xl font-bold heading-font">Shenandoah National Park</h3>
                             <span class="text-[#D4AF37] font-bold">$189</span>
                         </div>
-                        <p class="text-[#6B7280]">2 días • Senderismo</p>
-                        <button onclick="alert('¡Te prepararé una cotización!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
+                        <p class="text-[#6B7280]">Virginia • 2 días</p>
+                        <button onclick="alert('¡Te prepararé una cotización para Shenandoah!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
                     </div>
                 </div>
-                <!-- Agrega más tarjetas aquí si quieres -->
+
+                <!-- 3. Outer Banks -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
+                    <img src="https://source.unsplash.com/random/600x400/?beach" class="w-full h-56 object-cover" alt="Outer Banks">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold heading-font">Outer Banks Beach Escape</h3>
+                            <span class="text-[#D4AF37] font-bold">$249</span>
+                        </div>
+                        <p class="text-[#6B7280]">North Carolina • 3 días</p>
+                        <button onclick="alert('¡Te prepararé una cotización para Outer Banks!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
+                    </div>
+                </div>
+
+                <!-- 4. Blue Ridge -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
+                    <img src="https://source.unsplash.com/random/600x400/?forest" class="w-full h-56 object-cover" alt="Blue Ridge">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold heading-font">Blue Ridge Parkway Drive</h3>
+                            <span class="text-[#D4AF37] font-bold">$159</span>
+                        </div>
+                        <p class="text-[#6B7280]">Virginia • 2 días</p>
+                        <button onclick="alert('¡Te prepararé una cotización para Blue Ridge!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
+                    </div>
+                </div>
+
+                <!-- 5. Sedona -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
+                    <img src="https://source.unsplash.com/random/600x400/?sedona" class="w-full h-56 object-cover" alt="Sedona">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold heading-font">Sedona Red Rocks Adventure</h3>
+                            <span class="text-[#D4AF37] font-bold">$279</span>
+                        </div>
+                        <p class="text-[#6B7280]">Arizona • 3 días</p>
+                        <button onclick="alert('¡Te prepararé una cotización para Sedona!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
+                    </div>
+                </div>
+
+                <!-- 6. Asheville -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
+                    <img src="https://source.unsplash.com/random/600x400/?asheville" class="w-full h-56 object-cover" alt="Asheville">
+                    <div class="p-6">
+                        <div class="flex justify-between items-start">
+                            <h3 class="text-2xl font-bold heading-font">Asheville Mountain Getaway</h3>
+                            <span class="text-[#D4AF37] font-bold">$199</span>
+                        </div>
+                        <p class="text-[#6B7280]">North Carolina • 2 días</p>
+                        <button onclick="alert('¡Te prepararé una cotización para Asheville!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- Contacto y Footer (mantengo simple por ahora) -->
+    <!-- Contacto -->
     <section id="contact-section" class="py-16 bg-white">
         <div class="max-w-xl mx-auto px-5 text-center">
             <h2 id="contact-title" class="text-3xl md:text-4xl font-bold heading-font text-[#1E3A8A]">¿Listo para tu próxima aventura?</h2>
             <p id="contact-subtitle" class="text-gray-600 mt-4 mb-8">Envíame tus datos y te armo tu plan personalizado</p>
-            <!-- Formulario aquí -->
+            
+            <div class="bg-gray-50 p-8 rounded-3xl">
+                <form action="https://formspree.io/f/xpwwzqjd" method="POST">
+                    <input type="text" name="nombre" placeholder="Nombre completo" required class="w-full px-5 py-4 rounded-2xl border mb-4">
+                    <input type="email" name="email" placeholder="Correo electrónico" required class="w-full px-5 py-4 rounded-2xl border mb-4">
+                    <textarea name="mensaje" placeholder="Cuéntame sobre tu viaje ideal..." rows="4" required class="w-full px-5 py-4 rounded-2xl border mb-6"></textarea>
+                    <button type="submit" class="w-full bg-[#1E3A8A] hover:bg-[#60A5FA] text-white py-4 rounded-2xl font-semibold">
+                        Enviar Mensaje
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="bg-[#1E3A8A] text-white py-10 text-center">
+        <p id="footer-name" class="text-xl font-medium heading-font">AB Travel Advisor</p>
+        <p class="text-blue-200">Virginia, USA</p>
+        <p class="mt-4 text-sm">
+            <a href="mailto:abatravelagencyinfo@gmail.com" class="hover:text-white">abatravelagencyinfo@gmail.com</a>
+        </p>
+    </footer>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.me/15753139351" target="_blank" 
+       class="fixed bottom-6 right-6 bg-[#25D366] text-white w-14 h-14 rounded-full flex items-center justify-center text-3xl shadow-xl z-50">
+        <i class="fab fa-whatsapp"></i>
+    </a>
 
     <script>
         let currentLang = 'es';
@@ -126,9 +218,10 @@
             const en = document.getElementById('lang-en');
 
             if (currentLang === 'en') {
-                es.style.opacity = '0.4';
-                en.style.opacity = '1';
-                // Traducciones a inglés aquí
+                es.classList.add('text-gray-400');
+                en.classList.remove('text-gray-400');
+                en.classList.add('text-[#1E3A8A]');
+                // Traducciones a inglés (puedes expandirlas)
                 document.getElementById('hero-title').innerHTML = 'Weekend Adventures<br>Within Your Budget';
                 document.getElementById('hero-subtitle').textContent = 'Personalized trips for millennials and couples from Virginia.';
                 document.getElementById('btn-destinos').textContent = 'Explore Destinations';
@@ -137,9 +230,9 @@
                 document.getElementById('contact-title').textContent = 'Ready for your next adventure?';
                 document.getElementById('contact-subtitle').textContent = "Send me your details and I'll create a personalized plan";
             } else {
-                es.style.opacity = '1';
-                en.style.opacity = '0.4';
-                // Volver a español
+                es.classList.remove('text-gray-400');
+                en.classList.add('text-gray-400');
+                en.classList.remove('text-[#1E3A8A]');
                 document.getElementById('hero-title').innerHTML = 'Aventuras de fin de semana<br>al alcance de tu presupuesto';
                 document.getElementById('hero-subtitle').textContent = 'Viajes personalizados para millennials y parejas desde Virginia.';
                 document.getElementById('btn-destinos').textContent = 'Explorar Destinos';
