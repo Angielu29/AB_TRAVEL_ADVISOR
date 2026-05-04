@@ -11,12 +11,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;400i&display=swap" rel="stylesheet">
     
     <style>
-        :root {
-            --azul-principal: #1E3A8A;
-            --azul-secundario: #60A5FA;
-            --dorado: #D4AF37;
-        }
-        
         body { 
             font-family: 'Open Sans', sans-serif; 
             background-color: #F1F3F5;
@@ -27,7 +21,7 @@
 
         .hero-bg {
             background-image: linear-gradient(rgba(30, 58, 138, 0.85), rgba(30, 58, 138, 0.85)), 
-                             url('https://source.unsplash.com/random/1920x1080/?mountain,lake,adventure');
+                             url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3');
             background-size: cover;
             background-position: center;
             min-height: 100vh;
@@ -92,13 +86,13 @@
             <h2 id="destinos-title" class="text-3xl md:text-4xl font-bold heading-font text-center text-[#1E3A8A] mb-12">Destinos Populares</h2>
             
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
-                <!-- 1. Santa Fe -->
+
+                <!-- Santa Fe -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
-                    <img src="https://unsplash.com/photos/a-building-with-a-bell-IHK7PjhGxKY" class="w-full h-56 object-cover" alt="Santa Fe">
+                    <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?ixlib=rb-4.0.3" class="w-full h-56 object-cover" alt="Santa Fe">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
-                            <h3 class="text-2xl font-bold heading-font">New Mexican Flavors Food Tour - Santa Fe</h3>
+                            <h3 class="text-2xl font-bold heading-font">New Mexican Flavors - Santa Fe</h3>
                             <span class="text-[#D4AF37] font-bold">$215</span>
                         </div>
                         <p class="text-[#6B7280]">Santa Fe, New Mexico • 2 días</p>
@@ -106,9 +100,9 @@
                     </div>
                 </div>
 
-                <!-- 2. Shenandoah -->
+                <!-- Shenandoah -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
-                    <img src="https://unsplash.com/photos/brown-and-green-trees-on-mountain-under-white-clouds-during-daytime-5is_9tno9BQ" class="w-full h-56 object-cover" alt="Shenandoah">
+                    <img src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?ixlib=rb-4.0.3" class="w-full h-56 object-cover" alt="Shenandoah">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-2xl font-bold heading-font">Shenandoah National Park</h3>
@@ -119,9 +113,9 @@
                     </div>
                 </div>
 
-                <!-- 3. Outer Banks -->
+                <!-- Outer Banks -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?beach" class="w-full h-56 object-cover" alt="Outer Banks">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-4.0.3" class="w-full h-56 object-cover" alt="Outer Banks">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
                             <h3 class="text-2xl font-bold heading-font">Outer Banks Beach Escape</h3>
@@ -132,12 +126,12 @@
                     </div>
                 </div>
 
-                <!-- 4. Blue Ridge -->
+                <!-- Blue Ridge -->
                 <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?forest" class="w-full h-56 object-cover" alt="Blue Ridge">
+                    <img src="https://images.unsplash.com/photo-1542206395-9feb3edaa68d?ixlib=rb-4.0.3" class="w-full h-56 object-cover" alt="Blue Ridge">
                     <div class="p-6">
                         <div class="flex justify-between items-start">
-                            <h3 class="text-2xl font-bold heading-font">Blue Ridge Parkway Drive</h3>
+                            <h3 class="text-2xl font-bold heading-font">Blue Ridge Parkway</h3>
                             <span class="text-[#D4AF37] font-bold">$159</span>
                         </div>
                         <p class="text-[#6B7280]">Virginia • 2 días</p>
@@ -145,37 +139,11 @@
                     </div>
                 </div>
 
-                <!-- 5. Sedona -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?sedona" class="w-full h-56 object-cover" alt="Sedona">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-2xl font-bold heading-font">Sedona Red Rocks Adventure</h3>
-                            <span class="text-[#D4AF37] font-bold">$279</span>
-                        </div>
-                        <p class="text-[#6B7280]">Arizona • 3 días</p>
-                        <button onclick="alert('¡Te prepararé una cotización para Sedona!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
-                    </div>
-                </div>
-
-                <!-- 6. Asheville -->
-                <div class="bg-white rounded-3xl overflow-hidden shadow-md card-hover">
-                    <img src="https://source.unsplash.com/random/600x400/?asheville" class="w-full h-56 object-cover" alt="Asheville">
-                    <div class="p-6">
-                        <div class="flex justify-between items-start">
-                            <h3 class="text-2xl font-bold heading-font">Asheville Mountain Getaway</h3>
-                            <span class="text-[#D4AF37] font-bold">$199</span>
-                        </div>
-                        <p class="text-[#6B7280]">North Carolina • 2 días</p>
-                        <button onclick="alert('¡Te prepararé una cotización para Asheville!')" class="mt-6 w-full bg-[#60A5FA] hover:bg-[#1E3A8A] text-white py-3 rounded-2xl">Quiero este viaje</button>
-                    </div>
-                </div>
-
             </div>
         </div>
     </section>
 
-    <!-- Contacto -->
+    <!-- Contact Section (resumido) -->
     <section id="contact-section" class="py-16 bg-white">
         <div class="max-w-xl mx-auto px-5 text-center">
             <h2 id="contact-title" class="text-3xl md:text-4xl font-bold heading-font text-[#1E3A8A]">¿Listo para tu próxima aventura?</h2>
@@ -196,9 +164,9 @@
 
     <!-- Footer -->
     <footer class="bg-[#1E3A8A] text-white py-10 text-center">
-        <p id="footer-name" class="text-xl font-medium heading-font">AB Travel Advisor</p>
+        <p class="text-xl font-medium heading-font">AB Travel Advisor</p>
         <p class="text-blue-200">Virginia, USA</p>
-        <p class="mt-4 text-sm">
+        <p class="mt-4">
             <a href="mailto:abatravelagencyinfo@gmail.com" class="hover:text-white">abatravelagencyinfo@gmail.com</a>
         </p>
     </footer>
@@ -211,17 +179,14 @@
 
     <script>
         let currentLang = 'es';
-
         function toggleLanguage() {
             currentLang = currentLang === 'es' ? 'en' : 'es';
             const es = document.getElementById('lang-es');
             const en = document.getElementById('lang-en');
-
             if (currentLang === 'en') {
                 es.classList.add('text-gray-400');
                 en.classList.remove('text-gray-400');
                 en.classList.add('text-[#1E3A8A]');
-                // Traducciones a inglés (puedes expandirlas)
                 document.getElementById('hero-title').innerHTML = 'Weekend Adventures<br>Within Your Budget';
                 document.getElementById('hero-subtitle').textContent = 'Personalized trips for millennials and couples from Virginia.';
                 document.getElementById('btn-destinos').textContent = 'Explore Destinations';
