@@ -34,6 +34,12 @@
             transform: translateY(-16px);
             box-shadow: 0 30px 60px -15px rgb(0 0 0 / 0.3);
         }
+
+        .logo-img {
+            width: 52px;
+            height: 52px;
+            object-fit: contain;
+        }
     </style>
 </head>
 <body>
@@ -42,7 +48,8 @@
     <nav class="bg-white border-b sticky top-0 z-50 shadow-sm">
         <div class="max-w-7xl mx-auto px-5 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
-                <div class="w-9 h-9 bg-[#1E3A8A] rounded-full flex items-center justify-center text-white font-bold text-xl">AB</div>
+                <!-- Logo PNG -->
+                <img src="images/logo.png" alt="AB Travel Advisor Logo" class="logo-img">
                 <span id="logo-text" class="text-xl font-bold heading-font text-[#1E3A8A]">AB Travel</span>
             </div>
             
@@ -126,7 +133,6 @@
 
     <script>
         // ==================== DATOS DE DESTINOS ====================
-        // Solo modificas aquí para agregar/editar tarjetas
         const destinos = [
             {
                 es: { titulo: "New Mexican Flavors - Santa Fe", ubicacion: "Santa Fe, New Mexico • 2 días", precio: "$215" },
@@ -145,7 +151,6 @@
             }
         ];
 
-        // Renderizar tarjetas
         function renderDestinos(lang) {
             const container = document.getElementById('destinos-container');
             container.innerHTML = '';
@@ -172,7 +177,6 @@
             });
         }
 
-        // Cambio de idioma
         let currentLang = 'es';
         function toggleLanguage() {
             currentLang = currentLang === 'es' ? 'en' : 'es';
@@ -183,7 +187,6 @@
                 es.classList.add('text-gray-400');
                 en.classList.remove('text-gray-400');
                 en.classList.add('text-[#1E3A8A]');
-                // Traducciones generales
                 document.getElementById('hero-title').innerHTML = 'Weekend Adventures<br>Within Your Budget';
                 document.getElementById('hero-subtitle').textContent = 'Personalized trips for millennials and couples from Virginia.';
                 document.getElementById('btn-destinos').textContent = 'Explore Destinations';
